@@ -20,7 +20,7 @@ This project is a web application that displays listings data using Express and 
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/daniuniperu/listing_dashboard.git)
    cd listings_project
    ```
 
