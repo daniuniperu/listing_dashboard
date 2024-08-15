@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+
+</head>
+<body>
+  <h1>Listings Dashboard</h1>
+  <div class="canvas3D">
+    <canvas id="listingsChart"></canvas>
+  </div>
+  <table id="listingsTable" border="1">
+    <thead>
+      <tr>
+        <th>Listing ID</th>
+        <th>Listing Month</th>
+        <th>New Listings</th>
+        <th>Broker</th>
+        <th>Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each listingsData}}
+      <tr>
+        <td>{{this.listing_id}}</td>
+        <td>{{this.listing_month}}</td>
+        <td>{{this.new_listings}}</td>
+        <td>{{this.broker}}</td>
+        <td>{{this.avg_revenue}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <script>
+    $(document).ready(function() {
+      $('#listingsTable').DataTable(); 
+    });
+  </script>
+
+  <script>
+    const brokersData = {{{brokersData}}};
+
+    const ctx = document.getElementById('listingsChart').getContext('2d');
+    const labels = Object.values(brokersData)[0].months.map(month => {
+
+      const [year, monthNum] = month.split("-");
+      return new Date(year, monthNum - 1);
+    });
+    console.log('labels' + JSON.stringify(labels));
+    const datasets = Object.keys(brokersData).map((broker, index) => ({
+      label: broker,
+      data: brokersData[broker].listings,
+      borderColor: `hsl(${index * 90}, 100%, 50%)`,
+      fill: false
+    }));
+    console.log('datasets' + JSON.stringify(datasets));
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: datasets
+      },
+      options: {
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              unit: 'month'
+            }
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

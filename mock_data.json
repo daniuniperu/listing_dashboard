@@ -1,0 +1,110 @@
+[
+    {
+      "broker": "BrokerA",
+      "listing_month": "2020-11",
+      "new_listings": 1,
+      "avg_revenue": 30852.3
+    },
+    {
+      "broker": "BrokerA",
+      "listing_month": "2020-12",
+      "new_listings": 1,
+      "avg_revenue": 6286.83
+    },
+    {
+      "broker": "BrokerA",
+      "listing_month": "2021-01",
+      "new_listings": 3,
+      "avg_revenue": 23096.31
+    },
+    {
+      "broker": "BrokerA",
+      "listing_month": "2021-02",
+      "new_listings": 2,
+      "avg_revenue": 29731.25
+    },
+    {
+      "broker": "BrokerA",
+      "listing_month": "2021-03",
+      "new_listings": 5,
+      "avg_revenue": 23260.292
+    },
+    {
+      "broker": "BrokerA",
+      "listing_month": "2021-04",
+      "new_listings": 3,
+      "avg_revenue": 25392.5
+    },
+    {
+        "broker": "BrokerB",
+        "listing_month": "2020-11",
+        "new_listings": 9,
+        "avg_revenue": 30852.3
+      },
+      {
+        "broker": "BrokerB",
+        "listing_month": "2020-12",
+        "new_listings": 10,
+        "avg_revenue": 6286.83
+      },
+      {
+        "broker": "BrokerB",
+        "listing_month": "2021-01",
+        "new_listings": 30,
+        "avg_revenue": 23096.31
+      },
+      {
+        "broker": "BrokerB",
+        "listing_month": "2021-02",
+        "new_listings": 4,
+        "avg_revenue": 29731.25
+      },
+      {
+        "broker": "BrokerB",
+        "listing_month": "2021-03",
+        "new_listings": 12,
+        "avg_revenue": 242260.292
+      },
+      {
+        "broker": "BrokerB",
+        "listing_month": "2021-04",
+        "new_listings": 34,
+        "avg_revenue": 25392.5
+      },
+      {
+        "broker": "BrokerC",
+        "listing_month": "2020-11",
+        "new_listings": 90,
+        "avg_revenue": 3852.3
+      },
+      {
+        "broker": "BrokerC",
+        "listing_month": "2020-12",
+        "new_listings": 19,
+        "avg_revenue": 686.83
+      },
+      {
+        "broker": "BrokerC",
+        "listing_month": "2021-01",
+        "new_listings": 37,
+        "avg_revenue": 296.31
+      },
+      {
+        "broker": "BrokerC",
+        "listing_month": "2021-02",
+        "new_listings": 40,
+        "avg_revenue": 231.25
+      },
+      {
+        "broker": "BrokerC",
+        "listing_month": "2021-03",
+        "new_listings": 23,
+        "avg_revenue": 260.292
+      },
+      {
+        "broker": "BrokerC",
+        "listing_month": "2021-04",
+        "new_listings": 3,
+        "avg_revenue": 292.5
+      }
+  ]
