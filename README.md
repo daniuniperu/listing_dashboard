@@ -38,6 +38,14 @@ This project is a web application that displays listings data using Express and 
 
 5. Open your browser and navigate to `http://localhost:3000` to view the application.
 
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/0f5299a3-89d9-4cfa-949d-e63513d82558)
+
+![image](https://github.com/user-attachments/assets/9d91fe5e-011e-42e2-98b8-11f48dab4a01)
+
+
+
 ## Usage
 - The application displays a table of listings with sortable columns.
 - Charts visualize the data for better insights.
