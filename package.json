@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "install-deps": "npm install", 
     "start": "node app.js"
   },
   "dependencies": {
